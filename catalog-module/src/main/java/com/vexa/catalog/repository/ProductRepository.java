@@ -6,11 +6,12 @@ import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.vexa.org.entity.Product;
 
 @Repository
-public class ProductRepository {
+public class ProductRepository  {
 //    @Autowired
 //    private DataSource dataSource;
 //    private Product currentProduct;
@@ -30,6 +31,8 @@ public class ProductRepository {
 	        this.dataSource = dataSource;
 	        this.currentProduct = new Product(1L, dataSource);
 	    }
+	    
+	    
     
     
 }
