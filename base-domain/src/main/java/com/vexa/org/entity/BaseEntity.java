@@ -24,6 +24,10 @@ public abstract class BaseEntity {
 		return false;
 	 }
 	}
+	public static String toSnakeCase(String str) {
+	    return str.replaceAll("([a-z])([A-Z])", "$1_$2")
+	              .toLowerCase();
+	}
 	
 	
 	

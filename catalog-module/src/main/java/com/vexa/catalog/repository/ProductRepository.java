@@ -7,21 +7,29 @@ import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.vexa.org.entity.Product;
+
 @Repository
 public class ProductRepository {
-    @Autowired
-    private DataSource dataSource;
+//    @Autowired
+//    private DataSource dataSource;
+//    private Product currentProduct;
+//    
+//    public ProductRepository() {
+//    	currentProduct = new Product(1L, dataSource);
+//    }
+	 private final DataSource dataSource;
+	    public Product getCurrentProduct() {
+		return this. currentProduct;
+	}
+
+		private  Product currentProduct;
+
+	    @Autowired
+	    public ProductRepository(DataSource dataSource) {
+	        this.dataSource = dataSource;
+	        this.currentProduct = new Product(1L, dataSource);
+	    }
     
-    private boolean isConnected() throws SQLException {
-    	   return 	this.dataSource.getConnection().isValid(2);
-    	    }
-    	   public boolean testConnect() {
-    		   try {
-				return this.isConnected();
-			   } catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-				return false;
-			   }
-    	   }  
+    
 }

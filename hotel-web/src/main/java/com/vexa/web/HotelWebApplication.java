@@ -1,13 +1,13 @@
-package com.vexa.org;
+package com.vexa.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 @SpringBootApplication
-//@EnableWebSecurity
-public class BaseDomainApplication {
+public class HotelWebApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BaseDomainApplication.class, args);
+		SpringApplication.run(HotelWebApplication.class, args);
 	}
 
 }
