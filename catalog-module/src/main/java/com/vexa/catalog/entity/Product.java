@@ -1,22 +1,17 @@
-package com.vexa.org.application.entity;
+package com.vexa.catalog.entity;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-
-
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Entity
 @Builder
-@Data
 
-public class Product  {
+public class Product {
     @Id
 	private Long idProduct;
     

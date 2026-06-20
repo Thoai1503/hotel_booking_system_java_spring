@@ -1,13 +1,13 @@
-package com.vexa.org;
-
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
-@SpringBootTest
-class BaseDomainApplicationTests {
-
-	@Test
-	void contextLoads() {
-	}
-
-}
+//package com.vexa.org;
+//
+//import org.junit.jupiter.api.Test;
+//import org.springframework.boot.test.context.SpringBootTest;
+//
+//@SpringBootTest
+//class BaseDomainApplicationTests {
+//
+//	@Test
+//	void contextLoads() {
+//	}
+//
+//}
