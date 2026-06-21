@@ -8,21 +8,26 @@ import java.time.LocalDate;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Data
 
+@Builder
+@Table(name = "qlo_product")
 public class Product  {
     @Id
 	private Long idProduct;
     
     private Long idSupplier;
     
-    private Long idManufacture;
+    private Long idManufacturer;
     
     private Long idCategoryDefault;
     
@@ -103,7 +108,7 @@ public class Product  {
     
     @Builder.Default
     @Column(nullable = false)
-    private BigDecimal weigth = BigDecimal.ZERO;
+    private BigDecimal weight = BigDecimal.ZERO;
         
     @Builder.Default
     @Column(nullable = false)

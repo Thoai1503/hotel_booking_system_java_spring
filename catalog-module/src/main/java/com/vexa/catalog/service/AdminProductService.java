@@ -14,16 +14,16 @@ import com.vexa.org.application.mapper.ProductMapper;
 @Service
 public class AdminProductService {
     private final ProductJpaRepository productRepository;
-
+  
     public AdminProductService(ProductJpaRepository productRepository) {
         this.productRepository = productRepository;
+     
     }
    
-   public List<ProductDTO> getAllProduct() {
-	   
-	   var productList = productRepository.findAll();
-	   
-	   
-	   return productList.stream().map(ProductMapper::toProductDTO).toList();
-   }
+    public List<ProductDTO> getAllProduct() {
+        return productRepository.findAll()
+            .stream()
+            .map(ProductMapper::toProductDTO)  // ✅ Sẽ map đầy đủ
+            .toList();
+    }
 }

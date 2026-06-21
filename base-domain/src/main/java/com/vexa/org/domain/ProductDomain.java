@@ -11,8 +11,6 @@ import javax.sql.DataSource;
 
 import com.vexa.org.application.entity.BaseEntity;
 
-import jakarta.persistence.Column;
-
 
 public class ProductDomain extends BaseDomain	 {
 

@@ -5,10 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.vexa.org.application.entity.Product;
 
-
-
-
-
+@Repository
 public interface ProductJpaRepository extends JpaRepository<Product, Long>  {
          
 }
